@@ -40,25 +40,9 @@ body { font-family: Arial, sans-serif; background:#f3f4f6; color:#000; }
 
 /* ERROR BOX */
 .error-box { background:#fef2f2; border-left:4px solid #ef4444; padding:12px 16px; margin:14px 0; font-size:13px; line-height:1.6; color:#7f1d1d; border-radius:0 6px 6px 0; }
-.error-box strong { color:#b91c1c; }
 
 /* GOOD BOX */
 .good-box { background:#f0fdf4; border-left:4px solid #22c55e; padding:12px 16px; margin:14px 0; font-size:13px; line-height:1.6; color:#14532d; border-radius:0 6px 6px 0; }
-.good-box strong { color:#15803d; }
-
-/* REC BOX (recommendations) */
-.rec { background:#fff; border:1px solid #e5e7eb; border-left:4px solid #2E6BE6; border-radius:0 8px 8px 0; padding:14px 18px; margin:12px 0; box-shadow:0 1px 3px rgba(0,0,0,.06); }
-.rec.green { border-left-color:#22c55e; }
-.rec.amber { border-left-color:#f59e0b; }
-.rec.red   { border-left-color:#ef4444; }
-.rec .rec-head { font-size:13px; font-weight:700; color:#0B1233; margin-bottom:6px; display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
-.rec .rec-head .metric { font-family:monospace; }
-.rec .rec-body { font-size:13px; line-height:1.65; color:#374151; }
-.rec .rec-body strong { color:#0B1233; }
-.rec .gap { font-size:11px; font-weight:700; padding:2px 9px; border-radius:12px; font-family:monospace; }
-.gap.behind { background:#fee2e2; color:#b91c1c; }
-.gap.ahead  { background:#dcfce7; color:#15803d; }
-.gap.close  { background:#fef3c7; color:#b45309; }
 
 /* KPI CARDS */
 .kpi-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(190px,1fr)); gap:16px; margin:20px 0; }
@@ -66,7 +50,6 @@ body { font-family: Arial, sans-serif; background:#f3f4f6; color:#000; }
 .kpi-card .val { font-size:26px; font-weight:800; color:#0B1233; }
 .kpi-card .label { font-size:12px; color:#6b7280; margin-top:5px; font-weight:600; text-transform:uppercase; letter-spacing:.4px; }
 .kpi-card .sub { font-size:11px; color:#9ca3af; margin-top:4px; }
-.kpi-card .tgt { font-size:11px; color:#2E6BE6; margin-top:6px; font-weight:600; }
 .kpi-card.green { border-top-color:#22c55e; } .kpi-card.green .val { color:#15803d; }
 .kpi-card.amber { border-top-color:#f59e0b; } .kpi-card.amber .val { color:#b45309; }
 .kpi-card.red { border-top-color:#ef4444; } .kpi-card.red .val { color:#b91c1c; }
@@ -93,7 +76,7 @@ td.amber { color:#b45309; font-weight:700; }
 
 /* FLOW DIAGRAM */
 .flow { display:flex; gap:0; align-items:stretch; margin:20px 0; flex-wrap:wrap; }
-.flow-box { background:#fff; border:1px solid #e5e7eb; border-radius:8px; padding:14px 18px; flex:1; min-width:150px; font-size:13px; }
+.flow-box { background:#fff; border:1px solid #e5e7eb; border-radius:8px; padding:14px 18px; flex:1; min-width:160px; font-size:13px; }
 .flow-box h4 { font-size:12px; text-transform:uppercase; letter-spacing:.5px; color:#6b7280; margin-bottom:6px; }
 .flow-box .main { font-size:15px; font-weight:700; color:#0B1233; }
 .flow-box .detail { font-size:11px; color:#9ca3af; margin-top:3px; }
@@ -117,52 +100,6 @@ td.amber { color:#b45309; font-weight:700; }
 .footer { background:#f3f4f6; padding:16px 40px; text-align:center; font-size:11px; color:#6b7280; border-top:1px solid #e5e7eb; margin-top:40px; }
 
 code { background:#eef1f4; padding:2px 7px; border-radius:4px; font-size:12px; color:#2E6BE6; font-family:monospace; }
-
-/* FUNNEL TABLE (redesigned) */
-.funnel-table { width:100%; border-collapse:separate; border-spacing:0; margin:20px 0; background:#fff; border-radius:10px; overflow:hidden; box-shadow:0 1px 3px rgba(0,0,0,.08); font-size:13px; }
-.funnel-table th { background:#0B1233; color:#fff; padding:11px 16px; text-align:left; font-size:11px; text-transform:uppercase; letter-spacing:.5px; }
-.funnel-table th.num, .funnel-table td.num { text-align:right; font-family:monospace; }
-.funnel-table td { padding:13px 16px; border-bottom:1px solid #f0f0f0; vertical-align:middle; }
-.funnel-table tr:last-child td { border-bottom:none; }
-.funnel-table tr:hover td { background:#f7faff; }
-.funnel-table .stage { font-weight:700; color:#0B1233; }
-.funnel-table .stage .step-no { display:inline-block; width:22px; height:22px; line-height:22px; text-align:center; background:#eaf1fd; color:#2E6BE6; border-radius:50%; font-size:11px; font-weight:800; margin-right:9px; }
-.funnel-table .stage small { display:block; font-weight:400; color:#9ca3af; font-size:11px; margin-left:31px; margin-top:2px; }
-.funnel-table .actual { font-weight:800; color:#0B1233; font-size:15px; font-family:monospace; }
-.funnel-table .actual small { display:block; font-weight:400; color:#9ca3af; font-size:11px; font-family:Arial,sans-serif; margin-top:2px; }
-.funnel-table .target { color:#2E6BE6; font-family:monospace; font-weight:700; }
-.funnel-table .target small { display:block; color:#9ca3af; font-weight:400; font-size:11px; font-family:Arial,sans-serif; margin-top:2px; }
-.status-pill { display:inline-block; font-size:11px; font-weight:700; padding:3px 11px; border-radius:20px; font-family:monospace; white-space:nowrap; }
-.status-pill.ok { background:#dcfce7; color:#15803d; }
-.status-pill.warn { background:#fef3c7; color:#b45309; }
-.status-pill.bad { background:#fee2e2; color:#b91c1c; }
-.status-pill.na { background:#f3f4f6; color:#6b7280; }
-
-/* RECOMMENDATION CARDS (redesigned) */
-.rec-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:18px 0; }
-.rec2 { background:#fff; border:1px solid #e5e7eb; border-radius:12px; overflow:hidden; box-shadow:0 1px 3px rgba(0,0,0,.06); display:flex; flex-direction:column; }
-.rec2-top { display:flex; align-items:center; gap:10px; padding:14px 18px; border-bottom:1px solid #f0f0f0; }
-.rec2-top .ic { font-size:18px; line-height:1; }
-.rec2-top .name { font-weight:800; color:#0B1233; font-size:14px; flex:1; }
-.rec2-nums { display:flex; gap:0; padding:0; border-bottom:1px solid #f0f0f0; }
-.rec2-nums .cell { flex:1; padding:11px 18px; text-align:center; border-right:1px solid #f0f0f0; }
-.rec2-nums .cell:last-child { border-right:none; }
-.rec2-nums .cell .k { font-size:10px; text-transform:uppercase; letter-spacing:.4px; color:#9ca3af; font-weight:700; }
-.rec2-nums .cell .v { font-size:16px; font-weight:800; color:#0B1233; font-family:monospace; margin-top:3px; }
-.rec2-nums .cell .v.tgt { color:#2E6BE6; }
-.rec2-body { padding:14px 18px; flex:1; }
-.rec2-body .lbl { font-size:10px; font-weight:800; text-transform:uppercase; letter-spacing:.5px; color:#6b7280; margin-bottom:3px; }
-.rec2-body .why { font-size:12.5px; color:#374151; line-height:1.6; margin-bottom:11px; }
-.rec2-body .action { font-size:12.5px; color:#0B1233; line-height:1.6; background:#f7faff; border-left:3px solid #2E6BE6; padding:8px 11px; border-radius:0 6px 6px 0; }
-.rec2.red .rec2-top { border-top:4px solid #ef4444; }
-.rec2.amber .rec2-top { border-top:4px solid #f59e0b; }
-.rec2.green .rec2-top { border-top:4px solid #22c55e; }
-.gap-tag { font-size:11px; font-weight:700; padding:3px 10px; border-radius:20px; font-family:monospace; white-space:nowrap; }
-.gap-tag.behind { background:#fee2e2; color:#b91c1c; }
-.gap-tag.ahead { background:#dcfce7; color:#15803d; }
-.gap-tag.close { background:#fef3c7; color:#b45309; }
-
-@media (max-width:760px){ .two-col,.three-col,.rec-grid{grid-template-columns:1fr;} }
 </style>
 </head>
 <body>
@@ -174,7 +111,7 @@ code { background:#eef1f4; padding:2px 7px; border-radius:4px; font-size:12px; c
     <p>DW_MB Intelligence Report &nbsp;|&nbsp; Database: analytics_warehouse &nbsp;|&nbsp; Generated: 2026-06-24</p>
   </div>
   <div class="header-right">
-    <div style="font-size:13px;font-weight:700;color:#5A9BF5;">18 KPIs · Actual vs Target</div>
+    <div style="font-size:13px;font-weight:700;color:#5A9BF5;">Verified 2026 YTD</div>
     <div>From live SQL · 4 source domains</div>
   </div>
 </div>
@@ -183,192 +120,60 @@ code { background:#eef1f4; padding:2px 7px; border-radius:4px; font-size:12px; c
 <div class="tabs-bar">
   <div class="tab active" data-p="overview">📊 Overview</div>
   <div class="tab" data-p="kpis">💡 KPI Results</div>
+  <div class="tab" data-p="workflow">🗄️ SQL Queries</div>
   <div class="tab" data-p="sources">🗄️ Data Sources</div>
   <div class="tab" data-p="countries">🌍 By Country</div>
   <div class="tab" data-p="faults">⚠️ Data Faults</div>
-  <div class="tab" data-p="workflow">🔧 How It Was Built</div>
 </div>
 
 <!-- ============================== OVERVIEW ============================== -->
 <div class="panel active" id="overview">
 
   <div class="headline">
-    <strong>What this report is:</strong> MultiBank's warehouse (<code>analytics_warehouse</code>) holds data from 12+ ad platforms, Google Analytics, an Adjust mobile attribution feed, a CRM back-office, and daily account ledger tables. This report pulls all of that together into a full set of executive KPIs — covering marketing efficiency, the click→visitor→lead→account→funded funnel, and revenue return — shows each one <strong>against its target</strong>, explains exactly where every number comes from, and ends with concrete recommendations for the marketing team.
+    <strong>What this report is:</strong> MultiBank's warehouse (<code>analytics_warehouse</code>) holds data from 12+ ad platforms, Google Analytics, an Adjust mobile attribution feed, a CRM back-office, and daily account ledger tables. This report pulls all of that together into a set of executive KPIs — covering marketing efficiency, account conversion, and revenue return.
   </div>
 
   <!-- TOP KPI CARDS -->
-  <h3 class="section-title">At a Glance — KPIs vs Target</h3>
-  <div class="kpi-grid">
-    <div class="kpi-card green"><div class="val">149.9%</div><div class="label">ROI</div><div class="sub">Revenue vs marketing spend</div></div>
-    <div class="kpi-card green"><div class="val">19.71%</div><div class="label">Account → Funded</div><div class="sub">Conversion rate</div><div class="tgt">🎯 Target 35%</div></div>
-    <div class="kpi-card red"><div class="val">$111.90</div><div class="label">Cost / Funded Account</div><div class="sub">CPFA</div><div class="tgt">🎯 Target $1,190</div></div>
-    <div class="kpi-card"><div class="val">28.68%</div><div class="label">Demo → Live</div><div class="sub">Activation rate</div></div>
-    <div class="kpi-card green"><div class="val">$22.10</div><div class="label">Cost / Account</div><div class="sub">CPA</div><div class="tgt">🎯 Target $417</div></div>
-    <div class="kpi-card green"><div class="val">$15,074</div><div class="label">Avg Account Size</div><div class="sub">Deposits per funded user</div><div class="tgt">🎯 Target $4,000</div></div>
-    <div class="kpi-card green"><div class="val">$69.7M</div><div class="label">NMI (2026 YTD)</div><div class="sub">Net Margin Income</div></div>
-    <div class="kpi-card amber"><div class="val">0.996%</div><div class="label">CTR</div><div class="sub">Click-through rate</div><div class="tgt">🎯 Target 1.00%</div></div>
-    <div class="kpi-card red"><div class="val">$0.65</div><div class="label">CPC</div><div class="sub">Cost per click</div><div class="tgt">🎯 Target $1.00</div></div>
-    <div class="kpi-card red"><div class="val">14.85%</div><div class="label">LPV %</div><div class="sub">Landing page view rate</div><div class="tgt">🎯 Target 70%</div></div>
-    <div class="kpi-card red"><div class="val">62.45%</div><div class="label">Bounce Rate</div><div class="sub">GA sessions bounced</div><div class="tgt">🎯 Target 50%</div></div>
-    <div class="kpi-card"><div class="val">50.0%</div><div class="label">Real Visitors %</div><div class="sub">Sessions × bounce rate</div><div class="tgt">🎯 Target 350,000</div></div>
-    <div class="kpi-card amber"><div class="val">$50</div><div class="label">Cost / Lead (CPL)</div><div class="sub">Spend ÷ leads</div><div class="tgt">🎯 Target $50</div></div>
-    <div class="kpi-card"><div class="val">12%</div><div class="label">Leads → Accounts</div><div class="sub">Live accounts ÷ leads</div><div class="tgt">🎯 Target 12%</div></div>
+  <h3 class="section-title">Key Performance Indicators (KPI's)</h3>
+  <div class="headline" style="margin-top:0">
+    <strong>- All figures below are computed from the warehouse for 2026-01-01 → 2026-06-25</strong> against sanctioned source tables. <br><strong>- LPV %, Bounce Rate can't be time-filtered because the GA feed has no date column,</strong> and ROI is on hold pending the revenue-definition sign-off from the data team. Everything else is verified.
   </div>
-  <div class="warn-box"><strong>How to read this:</strong> The 🎯 target is the planned per-campaign-period benchmark supplied by the marketing team. Card colour reflects how the live actual compares to that target (green = at/ahead, amber = close, red = behind). Several derived metrics (Real Visitors, Leads, Live Accounts, Funded Accounts, Clicks) are computed from the formulae shown on the <strong>KPI Results</strong> tab.</div>
+  <div class="kpi-grid">
+    <div class="kpi-card amber"><div class="val">On hold</div><div class="label">ROI</div><div class="sub">Revenue definition pending data team</div></div>
+    <div class="kpi-card green"><div class="val">29.73%</div><div class="label">Account → Funded</div><div class="sub">21,825 of 73,407 · target 35%</div></div>
+    <div class="kpi-card green"><div class="val">$71.61</div><div class="label">Cost / Funded Account</div><div class="sub">CPFA · $1.56M ÷ 21,825</div></div>
+    <div class="kpi-card green"><div class="val">$21.43</div><div class="label">Cost / Account</div><div class="sub">CPA · $1.56M ÷ 72,936</div></div>
+    <div class="kpi-card"><div class="val">73,407</div><div class="label">Accounts Opened</div><div class="sub">2026 YTD, non-test</div></div>
+    <div class="kpi-card"><div class="val">$6,582</div><div class="label">Avg Account Size</div><div class="sub">Deposits per funded user (target $4,000)</div></div>
+    <div class="kpi-card green"><div class="val">$71.58M</div><div class="label">NMI (2026 YTD)</div><div class="sub">daily_nmi_usd · sanctioned</div></div>
+    <div class="kpi-card red"><div class="val">0.569%</div><div class="label">CTR</div><div class="sub">2026 actual (target 1%)</div></div>
+    <div class="kpi-card red"><div class="val">$1.50</div><div class="label">CPC</div><div class="sub">2026 actual (target $1.00)</div></div>
+    <div class="kpi-card"><div class="val">67,792</div><div class="label">Leads</div><div class="sub">leads_python 2026 (target 20,000)</div></div>
+    <div class="kpi-card"><div class="val">$114.06M</div><div class="label">Deposits</div><div class="sub">17,329 funded users in 2026</div></div>
+    <div class="kpi-card amber"><div class="val">n/a</div><div class="label">LPV % / Bounce</div><div class="sub">GA feed undated — not computable</div></div>
+  </div>
 
   <!-- FUNNEL FLOW -->
-  <h3 class="section-title">The Full Marketing Funnel — End to End</h3>
-  <p style="font-size:12px;color:#6b7280;margin:-6px 0 14px;">Each stage shows the live actual alongside the marketing team's target funnel (1M clicks → 840 funded accounts). Status compares actual to target where both exist.</p>
-  <table class="funnel-table">
-    <tr>
-      <th style="width:30%">Stage</th>
-      <th class="num">Actual</th>
-      <th class="num">Target</th>
-      <th style="width:120px">Status</th>
-    </tr>
-    <tr>
-      <td class="stage"><span class="step-no">1</span>Clicks<small>CTR &amp; cost per click</small></td>
-      <td class="num"><span class="actual">23.23M<small>CTR 0.996% · CPC $0.65</small></span></td>
-      <td class="num"><span class="target">1,000,000<small>CTR 1% · CPC $1</small></span></td>
-      <td><span class="status-pill ok">CPC ahead</span></td>
-    </tr>
-    <tr>
-      <td class="stage"><span class="step-no">2</span>Sessions / LPV<small>Landing-page views from clicks</small></td>
-      <td class="num"><span class="actual">3.45M<small>LPV 14.85% of clicks</small></span></td>
-      <td class="num"><span class="target">700,000<small>LPV 70%</small></span></td>
-      <td><span class="status-pill bad">−55 pts</span></td>
-    </tr>
-    <tr>
-      <td class="stage"><span class="step-no">3</span>Real Visitors<small>Sessions × bounce rate</small></td>
-      <td class="num"><span class="actual">—</span></td>
-      <td class="num"><span class="target">350,000<small>700k × 50%</small></span></td>
-      <td><span class="status-pill na">to track</span></td>
-    </tr>
-    <tr>
-      <td class="stage"><span class="step-no">4</span>Leads<small>Spend ÷ cost per demo account</small></td>
-      <td class="num"><span class="actual">—</span></td>
-      <td class="num"><span class="target">20,000<small>CPL $50</small></span></td>
-      <td><span class="status-pill na">to track</span></td>
-    </tr>
-    <tr>
-      <td class="stage"><span class="step-no">5</span>Live Accounts<small>Cost per account · lead→account</small></td>
-      <td class="num"><span class="actual">995,393<small>CPA $22.10</small></span></td>
-      <td class="num"><span class="target">2,400<small>CPA $417 · L→A 12%</small></span></td>
-      <td><span class="status-pill ok">CPA ahead</span></td>
-    </tr>
-    <tr>
-      <td class="stage"><span class="step-no">6</span>Funded Accounts<small>First-deposit clients</small></td>
-      <td class="num"><span class="actual">196,203<small>19.71% fund · CPFA $111.90</small></span></td>
-      <td class="num"><span class="target">840<small>A→F 35% · CPFA $1,190</small></span></td>
-      <td><span class="status-pill bad">A→F −15 pts</span></td>
-    </tr>
-    <tr>
-      <td class="stage"><span class="step-no">7</span>Deposits / Revenue<small>Trading revenue &amp; return</small></td>
-      <td class="num"><span class="actual">$54.87M<small>ROI 149.9%</small></span></td>
-      <td class="num"><span class="target">$3.36M<small>Avg account $4,000</small></span></td>
-      <td><span class="status-pill ok">ROI ahead</span></td>
-    </tr>
-  </table>
-
-  <!-- RECOMMENDATIONS -->
-  <h3 class="section-title">Recommendations — What the Marketing Team Should Do</h3>
-  <div class="headline">Prioritised, data-driven actions. Each is tied to a KPI that is off its target, with the gap and a concrete next step. Work top-down — the red items move the funnel the most.</div>
-
-  <div class="rec-grid">
-
-    <div class="rec2 red">
-      <div class="rec2-top"><span class="ic">🛬</span><span class="name">LPV %</span><span class="gap-tag behind">−55 pts behind</span></div>
-      <div class="rec2-nums">
-        <div class="cell"><div class="k">Actual</div><div class="v">14.85%</div></div>
-        <div class="cell"><div class="k">Target</div><div class="v tgt">70%</div></div>
-      </div>
-      <div class="rec2-body">
-        <div class="lbl">Why it matters</div>
-        <div class="why">Only ~15% of clicks turn into a recorded landing-page view — the single biggest leak in the funnel.</div>
-        <div class="lbl">Action</div>
-        <div class="action">Audit page load speed and the click→landing redirect chain, confirm GA tags fire on every paid landing page, and check for click fraud in cheap geos. A partial fix cascades into more leads, accounts and funded users.</div>
-      </div>
-    </div>
-
-    <div class="rec2 red">
-      <div class="rec2-top"><span class="ic">↩️</span><span class="name">Bounce Rate</span><span class="gap-tag behind">+12 pts worse</span></div>
-      <div class="rec2-nums">
-        <div class="cell"><div class="k">Actual</div><div class="v">62.45%</div></div>
-        <div class="cell"><div class="k">Target</div><div class="v tgt">50%</div></div>
-      </div>
-      <div class="rec2-body">
-        <div class="lbl">Why it matters</div>
-        <div class="why">Almost two-thirds of sessions leave with no interaction; the worst offender is Mexico at 86.6%.</div>
-        <div class="lbl">Action</div>
-        <div class="action">Localise and A/B-test landing pages for the highest-spend markets (UAE, India, KSA, Mexico), match ad creative to page content, and trim slow-loading hero elements. Lower bounce directly lifts Real Visitors.</div>
-      </div>
-    </div>
-
-    <div class="rec2 red">
-      <div class="rec2-top"><span class="ic">📉</span><span class="name">Account → Funded</span><span class="gap-tag behind">−15 pts behind</span></div>
-      <div class="rec2-nums">
-        <div class="cell"><div class="k">Actual</div><div class="v">19.71%</div></div>
-        <div class="cell"><div class="k">Target</div><div class="v tgt">35%</div></div>
-      </div>
-      <div class="rec2-body">
-        <div class="lbl">Why it matters</div>
-        <div class="why">About 80% of opened accounts never deposit — the highest-leverage step. Closing the gap to 35% nearly doubles funded volume at the same spend.</div>
-        <div class="lbl">Action</div>
-        <div class="action">Launch onboarding nudges and first-deposit incentives, target the worst markets (USA 2.4%, China 8.4%, Colombia 11.8%), and review KYC/funding friction in those geos.</div>
-      </div>
-    </div>
-
-    <div class="rec2 amber">
-      <div class="rec2-top"><span class="ic">💵</span><span class="name">CPC</span><span class="gap-tag ahead">ahead on cost</span></div>
-      <div class="rec2-nums">
-        <div class="cell"><div class="k">Actual</div><div class="v">$0.65</div></div>
-        <div class="cell"><div class="k">Target</div><div class="v tgt">$1.00</div></div>
-      </div>
-      <div class="rec2-body">
-        <div class="lbl">Why it matters</div>
-        <div class="why">CPC is below target, which looks efficient — but combined with the very low LPV it suggests some clicks are low quality or fraudulent rather than genuinely cheap.</div>
-        <div class="lbl">Action</div>
-        <div class="action">Don't simply chase cheaper clicks; reallocate budget toward markets with proven funded-rate quality (Canada 31.8%, Italy 33.5%) even at higher CPC, and quarantine anomalous geos.</div>
-      </div>
-    </div>
-
-    <div class="rec2 amber">
-      <div class="rec2-top"><span class="ic">🧾</span><span class="name">CPL</span><span class="gap-tag close">on target</span></div>
-      <div class="rec2-nums">
-        <div class="cell"><div class="k">Actual</div><div class="v">$50</div></div>
-        <div class="cell"><div class="k">Target</div><div class="v tgt">$50</div></div>
-      </div>
-      <div class="rec2-body">
-        <div class="lbl">Why it matters</div>
-        <div class="why">Cost per lead is on plan, but lead→account (12%) and account→funded (35% target) are where value is won or lost.</div>
-        <div class="lbl">Action</div>
-        <div class="action">Hold CPL steady and focus optimisation budget on the conversion stages below the lead — not on cheaper lead acquisition.</div>
-      </div>
-    </div>
-
-    <div class="rec2 green">
-      <div class="rec2-top"><span class="ic">✅</span><span class="name">ROI · NMI · Avg Account</span><span class="gap-tag ahead">ahead of target</span></div>
-      <div class="rec2-nums">
-        <div class="cell"><div class="k">ROI</div><div class="v">149.9%</div></div>
-        <div class="cell"><div class="k">Avg Acct</div><div class="v">$15,074</div></div>
-        <div class="cell"><div class="k">Target Avg</div><div class="v tgt">$4,000</div></div>
-      </div>
-      <div class="rec2-body">
-        <div class="lbl">Why it matters</div>
-        <div class="why">The economics at the bottom of the funnel are strong — average account size is well above the $4,000 target and CPFA is far under the $1,190 ceiling.</div>
-        <div class="lbl">Action</div>
-        <div class="action">Protect this by reinvesting the headroom into fixing the top-of-funnel leaks above; the high account value makes every extra funded account disproportionately valuable.</div>
-      </div>
-    </div>
-
+  <h3 class="section-title">The Full Marketing Funnel — 2026 YTD (verified)</h3>
+  <div class="flow">
+    <div class="flow-box"><h4>Clicks</h4><div class="main">749,057</div><div class="detail">CTR: <strong>0.569%</strong> · CPC: <strong>$1.50</strong></div></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-box"><h4>Leads</h4><div class="main">67,792</div><div class="detail">Demo/registrations · <strong>15,577</strong> funded</div></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-box"><h4>Accounts Opened</h4><div class="main">73,407</div><div class="detail">CPA: <strong>$21.43</strong> per account</div></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-box"><h4>Funded Accounts</h4><div class="main">21,825</div><div class="detail">29.73% fund · CPFA: <strong>$71.61</strong></div></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-box"><h4>Deposits</h4><div class="main">$114.06M</div><div class="detail">17,329 funded users · NMI <strong>$71.58M</strong></div></div>
   </div>
+  <div class="warn-box" style="margin-top:6px"><strong>Note:</strong> Impressions, LPV % and a revenue/ROI stage are omitted here — the GA feed is undated (no LPV) and the revenue column for ROI is awaiting data-team sign-off.</div>
 
   <!-- DOMAIN MAP -->
   <h3 class="section-title">Four Data Domains in the Warehouse</h3>
   <table>
     <tr><th>Domain</th><th>What it contains</th><th>Key tables</th><th>Reliability</th></tr>
     <tr><td><strong>Paid Marketing</strong></td><td>Ad impressions, clicks, cost — from 12+ ad platforms via Funnel.io connector</td><td><code>paidmarketing_2024</code>, <code>paidmarketing_hist</code></td><td><span class="pill pill-amber">Auto but noisy</span></td></tr>
-    <tr><td><strong>Accounts & Revenue</strong></td><td>Client accounts, funding status, demo/live flags, trading revenue, deposits</td><td><code>accounts_python</code>, <code>dm_profile</code>, <code>dm_bv_revenue</code>, <code>accounts_daily_2026</code></td><td><span class="pill pill-green">Clean (CRM source)</span></td></tr>
+    <tr><td><strong>Accounts & Revenue</strong></td><td>Client accounts, funding status, flags, NMI, deposits</td><td><code>accounts_python</code>, <code>dm_profile</code>, <code>dm_sales_performance_2026</code></td><td><span class="pill pill-green">Sanctioned</span></td></tr>
     <tr><td><strong>Web Analytics (GA)</strong></td><td>Landing page views, bounce rate by country and session</td><td><code>stg_ga_csv</code>, <code>stg_ga_user</code></td><td><span class="pill pill-red">Fragile (manual CSV)</span></td></tr>
     <tr><td><strong>Mobile Attribution</strong></td><td>App campaigns, install attribution across 278 networks</td><td><code>adjust</code>, <code>dm_adjust_view</code></td><td><span class="pill pill-green">Auto (Adjust SaaS)</span></td></tr>
   </table>
@@ -378,227 +183,127 @@ code { background:#eef1f4; padding:2px 7px; border-radius:4px; font-size:12px; c
 <!-- ============================== KPI RESULTS ============================== -->
 <div class="panel" id="kpis">
 
-  <h3 class="section-title">All KPIs — At a Glance</h3>
-  <div class="headline">Each KPI with a one-line read, how it's calculated, and its source. Funnel KPIs use the team's formulae (shown below the table).</div>
+  <h3 class="section-title">All KPIs — Verified 2026 YTD</h3>
+  <div class="headline">Every row recomputed for <strong>2026-01-01 → 2026-06-25</strong> against sanctioned source tables (per the data team's table list). Value column shows the verified 2026 actual; the source column names the exact sanctioned table. Two GA metrics can't be time-filtered and ROI is on hold — both flagged below.</div>
 
   <table>
-    <tr><th style="width:30px">#</th><th style="width:160px">KPI</th><th style="width:100px" class="num">Value</th><th>What it means</th><th>How it's calculated</th><th>Data source</th></tr>
+    <tr><th style="width:30px">#</th><th style="width:160px">KPI</th><th style="width:100px" class="num">2026 Value</th><th>What it means</th><th>How it's calculated</th><th>Source (sanctioned)</th></tr>
 
     <tr>
-      <td>1</td><td><strong>ROI</strong><br><span style="font-size:11px;color:#6b7280">Return on Investment</span></td>
-      <td class="num green">149.9%</td>
-      <td>Every $1 of marketing returns ~$2.50 in trading revenue — a strong positive return.</td>
-      <td>(Revenue $54.87M − Cost $21.96M) ÷ Cost $21.96M</td>
-      <td><code>dm_bv_revenue</code> + paid + Adjust + offline</td>
+      <td>1</td><td><strong>NMI</strong><br><span style="font-size:11px;color:#6b7280">Net Margin Income</span></td>
+      <td class="num green">$71.58M</td>
+      <td>Core 2026 profitability. Verified against the sanctioned sales-performance table; matches the earlier $71.96M pull within 0.5%.</td>
+      <td>SUM(daily_nmi_usd), reporting_date in 2026</td>
+      <td><code>dm_sales_performance_2026</code></td>
     </tr>
 
     <tr>
       <td>2</td><td><strong>Account to Funded %</strong><br><span style="font-size:11px;color:#6b7280">Conversion rate</span></td>
-      <td class="num">19.71%</td>
-      <td>~1 in 5 accounts fund; 80% never deposit. The most critical conversion step.</td>
-      <td>196,203 funded ÷ 995,393 total accounts</td>
-      <td><code>accounts_python</code> (<code>has_ftd</code>)</td>
+      <td class="num green">29.73%</td>
+      <td>Of accounts opened in 2026, ~30% have funded — better than the 19.71% lifetime figure and approaching the 35% target.</td>
+      <td>21,825 funded ÷ 73,407 non-test accounts opened in 2026</td>
+      <td><code>accounts_python</code> (<code>has_ftd</code>, <code>account_creation_time</code>)</td>
     </tr>
 
     <tr>
       <td>3</td><td><strong>CPFA</strong><br><span style="font-size:11px;color:#6b7280">Cost per Funded Account</span></td>
-      <td class="num">$111.90</td>
-      <td>Cost to acquire one depositing client — under 1% of avg account size.</td>
-      <td>$21.96M ÷ 196,203 funded accounts</td>
-      <td>Marketing cost + <code>accounts_python</code></td>
+      <td class="num green">$71.61</td>
+      <td>Cost to acquire one funded client in 2026 — well under the $1,190 target. Uses the genuine $1.56M of 2026 spend.</td>
+      <td>$1.56M total 2026 spend ÷ 21,825 funded accounts</td>
+      <td><code>accounts_python</code> + spend tables</td>
     </tr>
 
     <tr>
-      <td>4</td><td><strong>Demo to Live %</strong><br><span style="font-size:11px;color:#6b7280">Activation rate</span></td>
-      <td class="num amber">28.68%</td>
-      <td>~29% of demo users upgrade to live; 71% never convert.</td>
-      <td>67,220 converted ÷ 234,364 demo starters</td>
-      <td><code>dm_profile</code> (demo / live flags)</td>
+      <td>4</td><td><strong>CPA</strong><br><span style="font-size:11px;color:#6b7280">Cost per Account</span></td>
+      <td class="num green">$21.43</td>
+      <td>Cost per account opened in 2026 — essentially identical to the $22.10 the card claimed, so that one was right.</td>
+      <td>$1.56M ÷ 72,936 client + IB accounts (2026, non-test)</td>
+      <td><code>accounts_python</code> + spend tables</td>
     </tr>
 
     <tr>
-      <td>5</td><td><strong>CPA</strong><br><span style="font-size:11px;color:#6b7280">Cost per Account</span></td>
-      <td class="num">$22.10</td>
-      <td>Cost per account opened. Cost driver is conversion, not acquisition.</td>
-      <td>$21.96M ÷ 993,546 client + IB accounts</td>
-      <td>Marketing cost + <code>accounts_python</code></td>
+      <td>5</td><td><strong>Accounts Opened</strong><br><span style="font-size:11px;color:#6b7280">2026 registrations</span></td>
+      <td class="num">73,407</td>
+      <td>Non-test accounts created in 2026 YTD. The 995,393 on the old card was the lifetime total.</td>
+      <td>COUNT(*) where is_test=0, account_creation_time in 2026</td>
+      <td><code>accounts_python</code></td>
     </tr>
 
     <tr>
-      <td>6</td><td><strong>Avg Account Size</strong><br><span style="font-size:11px;color:#6b7280">Deposits per funded user</span></td>
-      <td class="num green">$15,074</td>
-      <td>Avg lifetime deposit per funded client — a high-value base.</td>
-      <td>$2.32B ÷ 154,152 funded portal users</td>
-      <td><code>dm_profile.total_deposit_usd</code></td>
+      <td>6</td><td><strong>Funded Accounts</strong><br><span style="font-size:11px;color:#6b7280">First-deposit accounts</span></td>
+      <td class="num">21,825</td>
+      <td>Accounts opened in 2026 that have funded.</td>
+      <td>SUM(has_ftd) where is_test=0, opened in 2026</td>
+      <td><code>accounts_python</code></td>
     </tr>
 
     <tr>
-      <td>7</td><td><strong>NMI</strong><br><span style="font-size:11px;color:#6b7280">Net Margin Income</span></td>
-      <td class="num green">$69.7M</td>
-      <td>Core 2026 YTD profitability from the daily ledger.</td>
-      <td>SUM of NMI in <code>accounts_daily_2026</code></td>
-      <td><code>accounts_daily_2026</code> (2026 YTD)</td>
+      <td>7</td><td><strong>Avg Account Size</strong><br><span style="font-size:11px;color:#6b7280">Deposits per funded user</span></td>
+      <td class="num">$6,582</td>
+      <td>Average deposit per user who funded in 2026, at the correct user grain. The $15,074 card was lifetime; the per-account table inflates this ~100× via multi-account duplication — do not use it.</td>
+      <td>$114.06M deposits ÷ 17,329 users who funded in 2026</td>
+      <td><code>dm_profile.total_deposit_usd</code> (<code>ftd_dtm</code>)</td>
     </tr>
 
     <tr>
-      <td>8</td><td><strong>CTR</strong><br><span style="font-size:11px;color:#6b7280">Click-through Rate</span></td>
-      <td class="num">0.996%</td>
-      <td>~1% of impressions click — in line with industry for finance.</td>
-      <td>23.23M clicks ÷ 2.331B impressions</td>
-      <td><code>paidmarketing_2024</code> (web only)</td>
+      <td>8</td><td><strong>Deposits</strong><br><span style="font-size:11px;color:#6b7280">Funded-user deposits</span></td>
+      <td class="num">$114.06M</td>
+      <td>Total deposits from the 17,329 users who made their first deposit in 2026.</td>
+      <td>SUM(total_deposit_usd), ftd_dtm in 2026</td>
+      <td><code>dm_profile</code></td>
     </tr>
 
     <tr>
-      <td>9</td><td><strong>CPC</strong><br><span style="font-size:11px;color:#6b7280">Cost per Click</span></td>
-      <td class="num">$0.6465</td>
-      <td>~$0.65 per click — low for finance; may reflect cheap geos.</td>
-      <td>$15.01M ÷ 23.23M clicks</td>
-      <td><code>paidmarketing_2024</code> (web only)</td>
+      <td>9</td><td><strong>Leads</strong><br><span style="font-size:11px;color:#6b7280">2026 registrations</span></td>
+      <td class="num">67,792</td>
+      <td>Real lead count for 2026 (15,577 of them funded), replacing the 20,000 planning target. Note: the demo flag isn't populated, so this counts all registrations.</td>
+      <td>COUNT(*), creation_time in 2026</td>
+      <td><code>leads_python</code></td>
     </tr>
 
     <tr>
-      <td>10</td><td><strong>LPV %</strong><br><span style="font-size:11px;color:#6b7280">Landing Page View %</span></td>
-      <td class="num amber">14.85%</td>
-      <td>~15% of clicks reach a GA view — a proxy; systems differ.</td>
-      <td>3.45M GA views ÷ 23.23M clicks</td>
-      <td><code>stg_ga_csv</code> vs <code>paidmarketing_2024</code></td>
-    </tr>
-
-    <tr>
-      <td>11</td><td><strong>Bounce Rate</strong><br><span style="font-size:11px;color:#6b7280">GA sessions bounced</span></td>
-      <td class="num red">62.45%</td>
-      <td>62% of sessions leave with no interaction — high; warrants review.</td>
-      <td>Views-weighted avg bounce rate</td>
-      <td><code>stg_ga_csv</code></td>
-    </tr>
-
-    <tr>
-      <td>12</td><td><strong>Real Visitors</strong><br><span style="font-size:11px;color:#6b7280">Engaged sessions</span></td>
-      <td class="num">🎯 350,000</td>
-      <td>Sessions that engage rather than bounce — true top of funnel.</td>
-      <td>Sessions × bounce rate (700,000 × 50%)</td>
-      <td><code>stg_ga_csv</code></td>
-    </tr>
-
-    <tr>
-      <td>13</td><td><strong>Leads</strong><br><span style="font-size:11px;color:#6b7280">Demo accounts</span></td>
-      <td class="num">🎯 20,000</td>
-      <td>Demo accounts from spend — first committed action.</td>
-      <td>Spent $ ÷ Cost per Demo Account $</td>
-      <td>Marketing cost + CRM demo flags</td>
-    </tr>
-
-    <tr>
-      <td>14</td><td><strong>Live Accounts</strong><br><span style="font-size:11px;color:#6b7280">Lead → account</span></td>
-      <td class="num">🎯 2,400</td>
-      <td>Leads converting to a live account — the gate before funding.</td>
-      <td>Leads × Leads to Accounts % (12%)</td>
-      <td>CRM (<code>live_acct_flag</code>)</td>
-    </tr>
-
-    <tr>
-      <td>15</td><td><strong>Funded Accounts Total</strong><br><span style="font-size:11px;color:#6b7280">Account → funded</span></td>
-      <td class="num">🎯 840</td>
-      <td>Live accounts that make a first deposit — revenue endpoint.</td>
-      <td>Live Accounts × Accounts to Funded % (35%)</td>
-      <td>CRM (<code>has_ftd</code>)</td>
-    </tr>
-
-    <tr>
-      <td>16</td><td><strong>Cost per Lead (CPL)</strong><br><span style="font-size:11px;color:#6b7280">Demo acquisition cost</span></td>
-      <td class="num">🎯 $50</td>
-      <td>Cost per demo/lead — on plan; focus on later conversion.</td>
-      <td>Spent $ ÷ Leads</td>
-      <td>Marketing cost + CRM demo flags</td>
-    </tr>
-
-    <tr>
-      <td>17</td><td><strong>Clicks (from spend)</strong><br><span style="font-size:11px;color:#6b7280">Budget-implied clicks</span></td>
-      <td class="num">🎯 1,000,000</td>
-      <td>Clicks the budget should buy at the planned CPC.</td>
-      <td>Spent $ ÷ Cost per Click (CPC) $</td>
+      <td>10</td><td><strong>CTR</strong><br><span style="font-size:11px;color:#6b7280">Click-through Rate</span></td>
+      <td class="num red">0.569%</td>
+      <td>2026 actual is roughly half the 0.996% the old card showed — paid efficiency is materially worse than previously stated. Target is 1%.</td>
+      <td>749,057 clicks ÷ 131.7M impressions (2026)</td>
       <td><code>paidmarketing_2024</code></td>
     </tr>
 
+    <tr>
+      <td>11</td><td><strong>CPC</strong><br><span style="font-size:11px;color:#6b7280">Cost per Click</span></td>
+      <td class="num red">$1.50</td>
+      <td>2026 clicks cost ~2.3× the $0.65 the old card claimed. Target is $1.00, so 2026 is over target.</td>
+      <td>$1.12M paid cost ÷ 749,057 clicks (2026)</td>
+      <td><code>paidmarketing_2024</code></td>
+    </tr>
+
+    <tr>
+      <td>12</td><td><strong>ROI</strong><br><span style="font-size:11px;color:#6b7280">Return on Investment</span></td>
+      <td class="num amber">On hold</td>
+      <td>Blocked pending the data team's revenue definition: gross P&amp;L ($176.3M), net P&amp;L ($146.6M) and the older bv_revenue figure ($39.6M) differ too much to pick one safely. Will publish once confirmed.</td>
+      <td>(Revenue − $1.56M spend) ÷ $1.56M — revenue TBD</td>
+      <td><code>dm_sales_performance_2026</code> (column TBD)</td>
+    </tr>
+
+    <tr>
+      <td>13</td><td><strong>LPV %</strong><br><span style="font-size:11px;color:#6b7280">Landing Page View %</span></td>
+      <td class="num amber">n/a</td>
+      <td>Cannot be computed for 2026. The GA feed has no date column, so it can't be filtered to any period.</td>
+      <td>—</td>
+      <td><code>stg_ga_csv</code> — no date column</td>
+    </tr>
+
+    <tr>
+      <td>14</td><td><strong>Bounce Rate</strong><br><span style="font-size:11px;color:#6b7280">GA sessions bounced</span></td>
+      <td class="num amber">n/a</td>
+      <td>Same blocker as LPV — the GA table is undated and can't be sliced to 2026.</td>
+      <td>—</td>
+      <td><code>stg_ga_csv</code> — no date column</td>
+    </tr>
+
   </table>
 
-  <h3 class="section-title">Funnel Formulae &amp; Target Plan</h3>
-  <div class="headline">These are the standard formulae used to derive the funnel KPIs, alongside the target value for each. The <strong>Target</strong> column is the planned per-period benchmark supplied by the marketing team — the dashboard compares live actuals against it throughout.</div>
-
-  <table>
-    <tr>
-      <th>KPI</th>
-      <th>Formula</th>
-      <th class="num">Target</th>
-      <th>What it tells you</th>
-    </tr>
-    <tr>
-      <td><strong>Clicks</strong></td>
-      <td><code>Clicks = Spent $ ÷ Cost per Click (CPC) $</code></td>
-      <td class="num">1,000,000</td>
-      <td>Volume of paid clicks the budget should buy at the planned CPC.</td>
-    </tr>
-    <tr>
-      <td><strong>Real Visitors</strong></td>
-      <td><code>Real Visitors = Sessions × Average of bounceRate</code></td>
-      <td class="num">350,000</td>
-      <td>700,000 sessions × 50% — the engaged share of traffic that actually stays on the page.</td>
-    </tr>
-    <tr>
-      <td><strong>Leads</strong></td>
-      <td><code>Leads = Spent $ ÷ Cost per Demo Account $ (Actual)</code></td>
-      <td class="num">20,000</td>
-      <td>Demo accounts created from spend at the target cost-per-demo (CPL $50).</td>
-    </tr>
-    <tr>
-      <td><strong>Live Accounts</strong></td>
-      <td><code>Live Accounts = Leads × Leads to Accounts %</code></td>
-      <td class="num">2,400</td>
-      <td>20,000 leads × 12% — leads that convert to a live (real-money) account.</td>
-    </tr>
-    <tr>
-      <td><strong>Cost per Account (CPA)</strong></td>
-      <td><code>CPA = Spent $ ÷ Live Accounts</code></td>
-      <td class="num">$417</td>
-      <td>Marketing cost to produce one live account at plan.</td>
-    </tr>
-    <tr>
-      <td><strong>Funded Accounts Total</strong></td>
-      <td><code>Funded Accounts = Live Accounts × Accounts to Funded % (Actual)</code></td>
-      <td class="num">840</td>
-      <td>2,400 live accounts × 35% — accounts that make a first deposit.</td>
-    </tr>
-    <tr>
-      <td><strong>Cost per Funded Account (CPFA)</strong></td>
-      <td><code>CPFA = Spent $ ÷ Funded Accounts Total</code></td>
-      <td class="num">$1,190</td>
-      <td>Fully-loaded cost to acquire one depositing client at plan.</td>
-    </tr>
-  </table>
-
-  <h3 class="section-title">Target Funnel — Full Plan Snapshot</h3>
-  <table>
-    <tr><th>Stage / Metric</th><th class="num">Target Value</th></tr>
-    <tr><td>Clicks</td><td class="num">1,000,000</td></tr>
-    <tr><td>Clickthrough Rate (CTR) % — Adjust / Legacy</td><td class="num">1%</td></tr>
-    <tr><td>Cost per Click (CPC) $</td><td class="num">$1.00</td></tr>
-    <tr><td>Sessions</td><td class="num">700,000</td></tr>
-    <tr><td>LPV %</td><td class="num">70%</td></tr>
-    <tr><td>Average of bounceRate</td><td class="num">50%</td></tr>
-    <tr><td><strong>Real Visitors</strong></td><td class="num">350,000</td></tr>
-    <tr><td><strong>Leads</strong></td><td class="num">20,000</td></tr>
-    <tr><td>Cost per Lead (CPL) $ — Actual</td><td class="num">$50</td></tr>
-    <tr><td><strong>Live Accounts</strong></td><td class="num">2,400</td></tr>
-    <tr><td>Cost per Account (CPA)</td><td class="num">$417</td></tr>
-    <tr><td>Leads to Accounts %</td><td class="num">12%</td></tr>
-    <tr><td><strong>Funded Accounts Total</strong></td><td class="num">840</td></tr>
-    <tr><td>Cost per Funded Account (CPFA)</td><td class="num">$1,190</td></tr>
-    <tr><td>Accounts to Funded % — Actual</td><td class="num">35%</td></tr>
-    <tr><td>Average Account Size $</td><td class="num">$4,000</td></tr>
-    <tr><td><strong>Deposits $</strong></td><td class="num">$3,360,000</td></tr>
-  </table>
-
-  <div class="warn-box"><strong>Important period note:</strong> These KPIs mix time windows. NMI is 2026 YTD. Paid spend covers 2024–2026. Account counts and revenue are all-time lifetime. ROI is directional — not a clean same-period return.</div>
+  <div class="warn-box"><strong>Sourcing note:</strong> NMI now comes from the sanctioned <code>dm_sales_performance_2026</code> (previously the unsanctioned <code>accounts_daily_2026</code>). Revenue/ROI awaits a single agreed revenue column. LPV % and Bounce remain blocked until a date column is added to the GA feed. All other rows are verified 2026 actuals.</div>
 
 </div>
 
@@ -606,7 +311,6 @@ code { background:#eef1f4; padding:2px 7px; border-radius:4px; font-size:12px; c
 <div class="panel" id="sources">
 
   <h3 class="section-title">Where the Data Actually Lives</h3>
-  <div class="headline">The warehouse has 4 source categories. Understanding this is critical because <strong>data you trust for one KPI may be wrong for another</strong>. The source type determines how reliable, fresh, and joinable each table is.</div>
 
   <table>
     <tr><th>Table / Group</th><th>Source Type</th><th>Upstream System</th><th>What It Powers</th><th>Trust Level</th></tr>
@@ -623,7 +327,7 @@ code { background:#eef1f4; padding:2px 7px; border-radius:4px; font-size:12px; c
       <td><code>adjust</code><br><code>dm_adjust_view</code></td>
       <td><span class="pill pill-blue">Auto SaaS</span></td>
       <td>Adjust mobile attribution platform. Covers 278 ad networks for app installs and re-engagement. Data_Source_type_name = 'Adjust'.</td>
-      <td>$6.38M of the total $21.96M marketing cost (used in ROI, CPA, CPFA)</td>
+      <td>$0.05M of the $1.56M 2026 marketing spend (used in CPA, CPFA)</td>
       <td><span class="pill pill-green">High — automated, dedicated attribution tool</span></td>
     </tr>
 
@@ -639,7 +343,7 @@ code { background:#eef1f4; padding:2px 7px; border-radius:4px; font-size:12px; c
       <td><code>stg_offline_marketing_spend</code></td>
       <td><span class="pill pill-red">Manual Sheet</span></td>
       <td>Spreadsheet upload covering affiliate/offline media: Investing.com, BrokerChooser, FXLeaders, Finance Magnates, TrustPilot. Identified by <code>unnamed: 6</code> column = spreadsheet import artifact.</td>
-      <td>$0.56M offline cost component in ROI, CPA, CPFA</td>
+      <td>$0.39M offline component of 2026 spend (CPA, CPFA)</td>
       <td><span class="pill pill-amber">Medium — manual entry, but small share of total cost</span></td>
     </tr>
 
@@ -660,26 +364,34 @@ code { background:#eef1f4; padding:2px 7px; border-radius:4px; font-size:12px; c
     </tr>
 
     <tr>
+      <td><code>dm_sales_performance_2026</code></td>
+      <td><span class="pill pill-green">Sanctioned (CRM/MT4/MT5)</span></td>
+      <td>Daily per-user NMI, deposits, P&amp;L for 2026. Official source for NMI.</td>
+      <td>NMI ($71.58M); candidate revenue column for ROI (pending sign-off)</td>
+      <td><span class="pill pill-green">High — sanctioned table</span></td>
+    </tr>
+
+    <tr>
       <td><code>dm_bv_revenue</code></td>
-      <td><span class="pill pill-green">Back-office (revenue)</span></td>
-      <td>Broker trading revenue: spreads, commission, swaps. Lifetime all broker activity.</td>
-      <td>ROI numerator ($54.87M gross revenue)</td>
-      <td><span class="pill pill-green">High — direct from trading ledger</span></td>
+      <td><span class="pill pill-amber">Not on sanctioned list</span></td>
+      <td>Spreads + commission + swaps ($39.6M for 2026). Not on the data team's sanctioned table list.</td>
+      <td>Was the old ROI numerator — now on hold pending revenue definition</td>
+      <td><span class="pill pill-amber">Do not use until confirmed</span></td>
     </tr>
 
     <tr>
       <td><code>accounts_daily_2026</code></td>
-      <td><span class="pill pill-green">Daily ledger</span></td>
-      <td>Daily account-level NMI and deposit records for 2026. Country stored as full name (e.g., "United Arab Emirates") — requires mapping to ISO2.</td>
-      <td>NMI KPI ($69.7M) and by-country NMI/Deposit breakdown</td>
-      <td><span class="pill pill-green">High — 2026 YTD only</span></td>
+      <td><span class="pill pill-amber">Not on sanctioned list</span></td>
+      <td>Daily account-level NMI/deposit records for 2026. Earlier NMI source, but not on the data team's sanctioned table list.</td>
+      <td>Superseded — NMI now from <code>dm_sales_performance_2026</code> ($71.58M)</td>
+      <td><span class="pill pill-amber">Cross-check only</span></td>
     </tr>
 
     <tr>
       <td><code>stg_mmm_output</code></td>
       <td><span class="pill pill-gray">Internal Model</span></td>
       <td>Output of an in-house Marketing Mix Model (data science job). Contains <code>model_id</code>, <code>mmm_last_runtime</code>, baseline/incremental splits.</td>
-      <td>Not used in the 11 KPIs — future use for attribution modelling</td>
+      <td>Not used in current KPIs — future use for attribution modelling</td>
       <td><span class="pill pill-gray">Model-dependent</span></td>
     </tr>
 
@@ -687,12 +399,11 @@ code { background:#eef1f4; padding:2px 7px; border-radius:4px; font-size:12px; c
       <td><code>dm_ib_campaign_report</code></td>
       <td><span class="pill pill-green">CRM (IB/Portal)</span></td>
       <td>Introducing Broker campaign data. Has portal_user_id, sales_rep, agreement_status, deposits.</td>
-      <td>IB partner performance — not in these 11 KPIs</td>
+      <td>IB partner performance — not in current KPIs</td>
       <td><span class="pill pill-green">High</span></td>
     </tr>
 
   </table>
-
 </div>
 
 <!-- ============================== COUNTRIES ============================== -->
@@ -746,6 +457,7 @@ code { background:#eef1f4; padding:2px 7px; border-radius:4px; font-size:12px; c
   </div>
 
 </div>
+
 
 <!-- ============================== FAULTS ============================== -->
 <div class="panel" id="faults">
@@ -821,15 +533,6 @@ code { background:#eef1f4; padding:2px 7px; border-radius:4px; font-size:12px; c
 
     <tr>
       <td>8</td>
-      <td><strong>Scientific Notation in Cost / Financial Columns</strong></td>
-      <td><span class="pill pill-gray">Presentation</span></td>
-      <td>Denmark row: Spent $ = 8.5e-05, CPL $ = 5.67e-06. These near-zero values suggest the row is ghost/test data but the formatting makes it unreadable.</td>
-      <td>Obscures near-zero values that should probably be filtered out. Reduces stakeholder readability of raw extracts.</td>
-      <td>CTR, CPC (minor distortion)</td>
-    </tr>
-
-    <tr>
-      <td>9</td>
       <td><strong>GA Data Loaded via Manual CSV (Fragile Pipeline)</strong></td>
       <td><span class="pill pill-red">Data Governance</span></td>
       <td>The <code>stg_ga_csv</code> table has phantom <code>Unnamed:</code> columns — a signature of pandas CSV import. This means someone is manually exporting from GA and uploading the file. No automated pipeline exists.</td>
@@ -838,7 +541,7 @@ code { background:#eef1f4; padding:2px 7px; border-radius:4px; font-size:12px; c
     </tr>
 
     <tr>
-      <td>10</td>
+      <td>9</td>
       <td><strong>Georgia CTR Anomaly (3.22% / $0.04 CPC)</strong></td>
       <td><span class="pill pill-red">Funnel Logic</span></td>
       <td>Georgia targeting geo: 5.1M clicks from 158.9M impressions at $216k cost. CTR = 3.22%, CPC = $0.04. For financial services, this is 3–5x the normal CTR at 1/20th the normal CPC.</td>
@@ -848,100 +551,101 @@ code { background:#eef1f4; padding:2px 7px; border-radius:4px; font-size:12px; c
 
   </table>
 
-  <h3 class="section-title">What This Means for Each KPI</h3>
-  <table>
-    <tr><th>KPI</th><th>Trust Level</th><th>Why</th></tr>
-    <tr><td>ROI (149.9%)</td><td class="green">Reasonable</td><td>Revenue from trading ledger is clean. Cost is well-sourced. Period mismatch is the main caveat (revenue = lifetime, spend = multi-year).</td></tr>
-    <tr><td>Account to Funded % (19.71%)</td><td class="green">High</td><td>Both numerator and denominator from the same clean CRM table.</td></tr>
-    <tr><td>CPFA ($111.90)</td><td class="green">High</td><td>Clean cost total divided by clean funded account count.</td></tr>
-    <tr><td>Demo to Live % (28.68%)</td><td class="green">High</td><td>Both flags from dm_profile, same grain. No cross-source join.</td></tr>
-    <tr><td>CPA ($22.10)</td><td class="green">High</td><td>Same as CPFA logic.</td></tr>
-    <tr><td>Avg Account Size ($15,074)</td><td class="green">High</td><td>dm_profile is the correct deduplicated source. Do not use accounts_python deposits.</td></tr>
-    <tr><td>NMI ($69.7M)</td><td class="green">High</td><td>Direct sum from daily ledger. 2026 YTD only.</td></tr>
-    <tr><td>CTR (0.996%)</td><td class="amber">Use with caution</td><td>Affected by clicks-exceed-impressions defect in some country rows, and Georgia anomaly. Direction is correct but exact number may be slightly off.</td></tr>
-    <tr><td>CPC ($0.65)</td><td class="amber">Use with caution</td><td>Georgia's $0.04 CPC pulls the aggregate down. Real CPC for quality traffic is likely higher.</td></tr>
-    <tr><td>LPV % (14.85%)</td><td class="red">Directional only</td><td>GA views from manual CSV + attribution bleed (sessions > clicks in some countries) + different time periods = not an accurate measure, just a trend indicator.</td></tr>
-    <tr><td>Bounce Rate (62.45%)</td><td class="amber">Moderate</td><td>GA data quality depends on manual CSV freshness. The 62% figure is directionally meaningful but may not be current.</td></tr>
-  </table>
-
 </div>
 
 <!-- ============================== WORKFLOW ============================== -->
 <div class="panel" id="workflow">
 
-  <h3 class="section-title">How the Analysis Was Built — Step by Step</h3>
-  <div class="headline">This section explains the technical decisions made to arrive at the core KPIs. It's useful context for anyone trying to reproduce, extend, or QA the numbers.</div>
-
-  <div class="step"><div class="step-n">Step 1 — Map the warehouse</div><p>Listed all candidate tables and pulled their schemas using <code>INFORMATION_SCHEMA.COLUMNS</code>. Identified columns containing the right signals: <code>has_ftd</code>, <code>Account_Type</code>, <code>NMI</code>, <code>total_deposit_usd</code>, demo flags, GA Views, Bounce_rate.</p></div>
-
-  <div class="step"><div class="step-n">Step 2 — Probe categorical fields</div><p>Ran distinct-value queries on <code>Account_Type</code> (Individual Client / IB / Demo), <code>Funded</code> flag, and demo flags in <code>dm_profile</code>. This confirmed which flag means "funded" (has_ftd = 1) and which means "live" (live_acct_flag = 1).</p></div>
-
-  <div class="step"><div class="step-n">Step 3 — Discover the country key problem</div><p>Found that accounts use ISO2, accounts_daily uses full country names, GA uses ISO2, and paidmarketing uses marketing region labels. These are incompatible — a direct join would silently drop or duplicate data.</p></div>
-
-  <div class="step"><div class="step-n">Step 4 — Decide join strategy</div><p>Standardised account/GA/daily tables to ISO2 using <code>lkp_country</code> and <code>country_mapping</code> lookup tables. Marketing geo was left on its own axis — regional labels like "Worldwide" and "MENA" cannot be mapped to individual countries. Result: cross-source KPIs (CPA, CPFA, ROI, LPV) are reported at total level only. Country-level breakdowns exist only for account + GA metrics.</p></div>
-
-  <div class="step"><div class="step-n">Step 5 — Resolve the deposit source conflict</div><p>Discovered that <code>accounts_python.total_deposits_usd</code> sums to $237B — inflated by multi-account duplication (same user, multiple accounts). Switched to <code>dm_profile.total_deposit_usd</code> which is deduplicated per portal user, totalling $2.32B. Avg account size = $15,074.</p></div>
-
-  <div class="step"><div class="step-n">Step 6 — Run total aggregates</div><p>Executed 6 SQL queries against the live warehouse. Q1: account counts/funded. Q2: marketing cost + traffic + NMI + GA. Q3: demo/live/deposits from dm_profile. Q4: gross trading revenue from dm_bv_revenue. Q5: merged by-country (ISO2 spine). Q6: marketing CTR/CPC by geo.</p></div>
-
-  <div class="step"><div class="step-n">Step 7 — Export to Excel</div><p>Results exported to <code>dw_mb_kpis.xlsx</code> with sheets for KPI Summary (Actual vs Target), By Country, and Definitions & Sources. Built using openpyxl.</p></div>
-
-  <h3 class="section-title">SQL Queries Used</h3>
+  <h3 class="section-title">SQL Queries — Every KPI</h3>
+  <div class="headline">Each query below is exactly what produced the verified 2026 numbers, filtered to <strong>2026-01-01 → 2026-06-25</strong> using each table's own date column.</div>
 
   <div style="margin:14px 0">
-    <div style="font-weight:700;font-size:13px;margin-bottom:4px">Q1. Account Counts &amp; Funded <span class="pill pill-blue">Drives KPIs 2, 3, 5</span></div>
-    <pre style="background:#0B1233;color:#e2e8f0;padding:14px 18px;border-radius:8px;font-size:12.5px;line-height:1.6;overflow-x:auto">SELECT COUNT(*) total_accts,
-  SUM(CASE WHEN Account_Type IN ('Individual Client','Introducing Broker') THEN 1 ELSE 0 END) client_accts,
-  SUM(has_ftd) funded_accts
-FROM accounts_python WHERE is_test=0;</pre>
+    <div style="font-weight:700;font-size:13px;margin-bottom:4px">Q1 — NMI <span class="pill pill-blue">$71.58M</span></div>
+    <pre style="background:#0B1233;color:#e2e8f0;padding:14px 18px;border-radius:8px;font-size:12.5px;line-height:1.6;overflow-x:auto">SELECT SUM(daily_nmi_usd) AS nmi_2026
+FROM dm_sales_performance_2026
+WHERE reporting_date &gt;= '2026-01-01' AND reporting_date &lt; '2026-06-26';</pre>
   </div>
 
   <div style="margin:14px 0">
-    <div style="font-weight:700;font-size:13px;margin-bottom:4px">Q2. Marketing Cost + Traffic + NMI + GA Bounce <span class="pill pill-blue">Drives KPIs 1, 7, 8, 9, 10, 11</span></div>
+    <div style="font-weight:700;font-size:13px;margin-bottom:4px">Q2 — Accounts opened, funded &amp; Account→Funded % <span class="pill pill-blue">73,407 · 21,825 · 29.73%</span></div>
     <pre style="background:#0B1233;color:#e2e8f0;padding:14px 18px;border-radius:8px;font-size:12.5px;line-height:1.6;overflow-x:auto">SELECT
-  (SELECT SUM(Cost) FROM paidmarketing_2024)                          paid_cost,
-  (SELECT SUM(Clicks) FROM paidmarketing_2024)                        paid_clicks,
-  (SELECT SUM(Impressions) FROM paidmarketing_2024)                   paid_impr,
-  (SELECT SUM(Cost) FROM adjust)                                      adjust_cost,
-  (SELECT SUM(spend) FROM stg_offline_marketing_spend
-     WHERE date &lt;= '2026-06-24')                                      offline_actual,
-  (SELECT SUM(NMI) FROM accounts_daily_2026)                          nmi_2026,
-  (SELECT SUM(Views) FROM stg_ga_csv)                                 ga_views,
-  (SELECT SUM(Views*Bounce_rate)/SUM(Views) FROM stg_ga_csv
-     WHERE Views &gt; 0)                                                 ga_bounce_wtd;</pre>
+  SUM(is_test=0)                                                                       AS accounts_opened,
+  SUM(is_test=0 AND Account_Type IN ('Individual Client','Introducing Broker'))        AS client_ib_accts,
+  SUM(is_test=0 AND has_ftd=1)                                                         AS funded_accounts,
+  SUM(is_test=0 AND has_ftd=1) / NULLIF(SUM(is_test=0),0)                              AS account_to_funded
+FROM accounts_python
+WHERE account_creation_time &gt;= '2026-01-01' AND account_creation_time &lt; '2026-06-26';</pre>
   </div>
 
   <div style="margin:14px 0">
-    <div style="font-weight:700;font-size:13px;margin-bottom:4px">Q3. Demo / Live / Deposits from dm_profile <span class="pill pill-blue">Drives KPIs 4 &amp; 6</span></div>
-    <pre style="background:#0B1233;color:#e2e8f0;padding:14px 18px;border-radius:8px;font-size:12.5px;line-height:1.6;overflow-x:auto">SELECT COUNT(*) users,
-  SUM(live_acct_flag)                                                  live_users,
-  SUM(CASE WHEN total_deposit_usd &gt; 0 THEN 1 ELSE 0 END)              funded_users,
-  SUM(total_deposit_usd)                                               total_deposit,
-  SUM(total_deposit_usd) /
-    NULLIF(SUM(CASE WHEN total_deposit_usd &gt; 0 THEN 1 ELSE 0 END),0)  avg_funded_acct_size,
-  SUM(pure_demo_flag) pure_demo, SUM(demo_to_live_flag) demo_to_live
-FROM dm_profile;</pre>
+    <div style="font-weight:700;font-size:13px;margin-bottom:4px">Q3 — Marketing spend (paid + mobile + offline) <span class="pill pill-blue">$1.56M</span></div>
+    <pre style="background:#0B1233;color:#e2e8f0;padding:14px 18px;border-radius:8px;font-size:12.5px;line-height:1.6;overflow-x:auto">SELECT
+  (SELECT SUM(Cost)  FROM paidmarketing_2024          WHERE Date &gt;= '2026-01-01' AND Date &lt; '2026-06-26') AS paid_cost,    -- 1,124,997
+  (SELECT SUM(Cost)  FROM adjust                      WHERE Date &gt;= '2026-01-01' AND Date &lt; '2026-06-26') AS adjust_cost,  --    46,602
+  (SELECT SUM(spend) FROM stg_offline_marketing_spend WHERE date &gt;= '2026-01-01' AND date &lt; '2026-06-26') AS offline_cost; --   391,338
+-- total marketing spend 2026 = 1,562,937</pre>
   </div>
 
   <div style="margin:14px 0">
-    <div style="font-weight:700;font-size:13px;margin-bottom:4px">Q4. Gross Trading Revenue <span class="pill pill-blue">ROI numerator</span></div>
-    <pre style="background:#0B1233;color:#e2e8f0;padding:14px 18px;border-radius:8px;font-size:12.5px;line-height:1.6;overflow-x:auto">SELECT SUM(total_usd_spreads)   spreads,
-       SUM(total_usd_commission) commission,
-       SUM(total_usd_swaps)      swaps,
-       SUM(total_usd_spreads + total_usd_commission + total_usd_swaps) gross_revenue
-FROM dm_bv_revenue;</pre>
+    <div style="font-weight:700;font-size:13px;margin-bottom:4px">Q4 — CPA &amp; CPFA <span class="pill pill-blue">$21.43 · $71.61</span></div>
+    <pre style="background:#0B1233;color:#e2e8f0;padding:14px 18px;border-radius:8px;font-size:12.5px;line-height:1.6;overflow-x:auto">-- Uses total spend from Q3 (1,562,937) over 2026 account counts from Q2
+SELECT
+  1562937 / NULLIF(SUM(is_test=0 AND Account_Type IN ('Individual Client','Introducing Broker')),0) AS cpa,
+  1562937 / NULLIF(SUM(is_test=0 AND has_ftd=1),0)                                                  AS cpfa
+FROM accounts_python
+WHERE account_creation_time &gt;= '2026-01-01' AND account_creation_time &lt; '2026-06-26';</pre>
   </div>
 
-  <h3 class="section-title">Caveats to Keep in Mind</h3>
-  <table>
-    <tr><th>Area</th><th>What the Caveat Is</th><th>Practical Impact</th></tr>
-    <tr><td><strong>Period mismatch</strong></td><td>NMI and deposits are 2026 YTD. Paid spend spans 2024–2026. Revenue is broker lifetime.</td><td>ROI is indicative — not a like-for-like period return. Do not present it as annual ROI.</td></tr>
-    <tr><td><strong>Grain mismatch</strong></td><td>Funded % uses account grain (accounts_python). Demo-to-live uses portal user grain (dm_profile). These denominators differ.</td><td>Do not divide one by the other to derive a combined rate.</td></tr>
-    <tr><td><strong>Deposit source</strong></td><td>accounts_python.total_deposits_usd sums to $237B (inflated). dm_profile is correct at $2.32B.</td><td>Always use dm_profile for any deposit or account size calculation.</td></tr>
-    <tr><td><strong>LPV is a proxy</strong></td><td>GA Views and ad Clicks come from different systems, different time windows, and different session definitions.</td><td>LPV % (14.85%) is a directional health indicator, not a true landing-page-view rate.</td></tr>
-    <tr><td><strong>Marketing cost scope</strong></td><td>CTR/CPC use paid web only ($15.01M). CPA/CPFA/ROI use full cost ($21.96M).</td><td>Keep consistent when comparing KPIs. Never use paid-only cost for ROI.</td></tr>
-    <tr><td><strong>Country join limitation</strong></td><td>Marketing geo labels (MENA, KSA, Worldwide) cannot be mapped to ISO2 countries.</td><td>CPA, CPFA, ROI are global totals only — no country breakdown available.</td></tr>
-  </table>
+  <div style="margin:14px 0">
+    <div style="font-weight:700;font-size:13px;margin-bottom:4px">Q5 — Deposits, funded users &amp; Avg Account Size <span class="pill pill-blue">$114.06M · 17,329 · $6,582</span></div>
+    <pre style="background:#0B1233;color:#e2e8f0;padding:14px 18px;border-radius:8px;font-size:12.5px;line-height:1.6;overflow-x:auto">SELECT
+  COUNT(*)                                    AS funded_users,
+  SUM(total_deposit_usd)                      AS deposits,
+  SUM(total_deposit_usd) / NULLIF(COUNT(*),0) AS avg_account_size
+FROM dm_profile
+WHERE ftd_dtm &gt;= '2026-01-01' AND ftd_dtm &lt; '2026-06-26';
+-- user grain (dm_profile) — avoids the ~100x multi-account inflation in accounts_python</pre>
+  </div>
+
+  <div style="margin:14px 0">
+    <div style="font-weight:700;font-size:13px;margin-bottom:4px">Q6 — CTR &amp; CPC <span class="pill pill-blue">0.569% · $1.50</span></div>
+    <pre style="background:#0B1233;color:#e2e8f0;padding:14px 18px;border-radius:8px;font-size:12.5px;line-height:1.6;overflow-x:auto">SELECT
+  SUM(Clicks)                            AS clicks,        --     749,057
+  SUM(Impressions)                       AS impressions,   -- 131,706,139
+  SUM(Cost)                              AS paid_cost,     --   1,124,997
+  SUM(Clicks)/NULLIF(SUM(Impressions),0) AS ctr,           --      0.569%
+  SUM(Cost)/NULLIF(SUM(Clicks),0)        AS cpc            --       $1.50
+FROM paidmarketing_2024
+WHERE Date &gt;= '2026-01-01' AND Date &lt; '2026-06-26';</pre>
+  </div>
+
+  <div style="margin:14px 0">
+    <div style="font-weight:700;font-size:13px;margin-bottom:4px">Q7 — Leads <span class="pill pill-blue">67,792 · 15,577 funded</span></div>
+    <pre style="background:#0B1233;color:#e2e8f0;padding:14px 18px;border-radius:8px;font-size:12.5px;line-height:1.6;overflow-x:auto">SELECT
+  COUNT(*)         AS leads,
+  SUM(has_ftd=1)   AS leads_funded
+FROM leads_python
+WHERE creation_time &gt;= '2026-01-01' AND creation_time &lt; '2026-06-26';
+-- demo flag (is_demo) is not populated, so this counts all 2026 registrations</pre>
+  </div>
+
+  <div style="margin:14px 0">
+    <div style="font-weight:700;font-size:13px;margin-bottom:4px">Q8 — ROI revenue candidates <span class="pill pill-amber">on hold</span></div>
+    <pre style="background:#0B1233;color:#e2e8f0;padding:14px 18px;border-radius:8px;font-size:12.5px;line-height:1.6;overflow-x:auto">-- ROI = (revenue - 1,562,937 spend) / 1,562,937. Awaiting data-team sign-off on
+-- which column is the official revenue line:
+SELECT
+  SUM(daily_gross_pnl_usd) AS gross_pnl,  -- 176.3M
+  SUM(daily_net_pnl_usd)   AS net_pnl     -- 146.6M
+FROM dm_sales_performance_2026
+WHERE reporting_date &gt;= '2026-01-01' AND reporting_date &lt; '2026-06-26';
+-- (older dm_bv_revenue spreads+commission+swaps = 39.6M — not on sanctioned list)</pre>
+  </div>
+
+  <div style="margin:14px 0">
+    <div style="font-weight:700;font-size:13px;margin-bottom:4px">Q9 — LPV % / Bounce Rate <span class="pill pill-red">not computable</span></div>
+    <pre style="background:#0B1233;color:#e2e8f0;padding:14px 18px;border-radius:8px;font-size:12.5px;line-height:1.6;overflow-x:auto">-- stg_ga_csv has NO date column, so neither can be filtered to 2026.
+-- Blocked until a reporting-date/period column is added at ingestion.</pre>
+  </div>
 
 </div>
 
